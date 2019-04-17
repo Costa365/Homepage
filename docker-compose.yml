@@ -1,0 +1,8 @@
+version: '3'
+services:
+  server:
+    image: "wichon/alpine-apache-php:latest"
+    ports:
+     - "80:80"
+    volumes:
+     - ./src:/app
