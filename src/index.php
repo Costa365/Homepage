@@ -1,11 +1,23 @@
 <html>
  <head>
-  <title>PHP Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browser Info</title>
+  <link href="//mincss.com/entireframework.min.css" rel="stylesheet" type="text/css">
  </head>
  <body>
- <p>
- <?php 
 
+ <nav class="nav" tabindex="-1" onclick="this.focus()">
+  <div class="container">
+   <a class="pagename current" href="#">Browser Info</a>
+   <a href="http://cpubenchmark.co.nf">CPU Info</a>
+   <a href="http://bloodglucoseconverter.co.nf/">Blood Glucose Converter</a> 
+   <a href="http://fonoapi.co.nf/">Phone Info</a>
+  </div>
+ </nav>
+ <p />
+ <div class="container">
+ <?php 
 
 function getBrowser() { 
   $u_agent = $_SERVER['HTTP_USER_AGENT'];
@@ -118,8 +130,8 @@ echo "Date: " . date("d/m/Y");
     $browser->getVersion(),
     $browser->getPlatform());
 */
- ?> 
-</p> 
+ ?>  
+</div>
 </body>
 </html>
 
