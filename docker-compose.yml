@@ -1,8 +1,8 @@
 version: '3'
 services:
   server:
-    image: "wichon/alpine-apache-php:latest"
+    image: "nimmis/alpine-apache-php7"
     ports:
      - "80:80"
     volumes:
-     - ./src:/app
+     - ./src:/web/html
