@@ -1,5 +1,5 @@
 <?php
-class BrowserInfo {
+class browserInfo {
   
   private $uagent = '';
   private $bname = 'Unknown';
