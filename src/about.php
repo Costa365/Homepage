@@ -18,7 +18,7 @@ include_once('header.php');
  </tr>
  <tr>
   <th>Operating System</th>
-  <td>Lubuntu 18.04</td>
+  <td>Lubuntu 18.04 (64-bit)</td>
  </tr>
  <tr>
   <th>CPU</th>
@@ -39,6 +39,14 @@ include_once('header.php');
  <tr>
   <th>CSS Framework</th>
   <td><a href="https://mincss.com">Min CSS</a></td>
+ </tr>
+ <tr>
+  <th>Docker</th>
+  <td>Version 18.09.5</td>
+ </tr>
+ <tr>
+  <th>Docker Compose</th>
+  <td>Version 1.17.1</td>
  </tr>
 </tbody>
 </table>

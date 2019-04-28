@@ -73,6 +73,8 @@ class browserInfo {
   private function readVersion(){
     $known = array('Version', $this->sname, 'other');
     $pattern = '#(?<browser>' . join('|', $known) . ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
+
+    preg_match_all($pattern, $this->uagent, $matches);
     $i = count($matches['browser']);
     
     if ($i != 1) {
