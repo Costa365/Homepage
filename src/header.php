@@ -2,7 +2,7 @@
   <div class="container">
    <a class="pagename current" href="/">Costa365</a>
    <a href="info.php">Browser Information</a> 
-   <a href="about.php">About</a>
+   <a href="about.php">About Server</a>
   </div>
  </nav>
  <p />

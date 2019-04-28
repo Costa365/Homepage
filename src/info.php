@@ -12,22 +12,17 @@
   include_once('ipInfo.php');
   $browserInfo = new browserInfo();
   $ipInfo = new ipInfo();
-  
-
-$ipaddress = $ipInfo->get_client_ip();
 
 echo '<div class="container">
 <table class="table">
 <tbody>
  <tr>
   <th>IP Address</th>';
-echo '  <td>' . $ipaddress . '</td>';
+echo '  <td>' . $ipInfo->getIpAddress() . '</td>';
 echo ' </tr>
  <tr>
   <th>Location</th>';
-echo '  <td>' . $ipInfo->ip_info($ipaddress , "City") . ', ' 
-. $ipInfo->ip_info($ipaddress , "Country")
-. '</td>';
+echo '  <td>' . $ipInfo->getLocation(). '</td>';
 echo ' </tr>
  <tr>
   <th>Browser</th>';
