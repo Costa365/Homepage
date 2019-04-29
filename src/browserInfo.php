@@ -3,7 +3,7 @@ class browserInfo {
   
   private $uagent = '';
   private $bname = 'Unknown';
-  private $version = '';
+  private $bversion = '';
   private $platform = 'Unknown';
   private $pattern = '';
   private $sname = '';
@@ -12,19 +12,72 @@ class browserInfo {
     $this->uagent = $_SERVER['HTTP_USER_AGENT'];
     $this->readPlatform();
     $this->readName();
-    $this->readVersion();
+    $this->readBrowserVersion();
   }
   
   private function readPlatform() {
     if (preg_match('/Android/i', $this->uagent)) {
-      $this->platform = 'Android';  
+      $this->platform = $this->readAndroidVersion();  
     }elseif(preg_match('/linux/i', $this->uagent)) {
       $this->platform = 'Linux';
     }elseif (preg_match('/macintosh|mac os x/i', $this->uagent)) {
       $this->platform = 'Mac';
     }elseif (preg_match('/windows|win32/i', $this->uagent)) {
-      $this->platform = 'Windows';
+      $this->platform = $this->readWindowsVersion();
     }
+  }
+
+  private function readWindowsVersion() {
+    if (strpos($this->uagent, 'Windows 95') !== false) {
+      return 'Windows 95';
+    }elseif (strpos($this->uagent, 'Win95') !== false) {
+      return 'Windows 95';
+    }elseif (strpos($this->uagent, 'Windows_95') !== false) {
+      return 'Windows 95';
+    }elseif (strpos($this->uagent, 'Windows 98') !== false) {
+      return 'Windows 98';
+    }elseif (strpos($this->uagent, 'Win98') !== false) {
+      return 'Windows 98';
+    }elseif (strpos($this->uagent, 'Windows NT 5.0') !== false) {
+      return 'Windows 2000';
+    }elseif (strpos($this->uagent, 'Windows 2000') !== false) {
+      return 'Windows 2000';
+    }elseif (strpos($this->uagent, 'Windows NT 5.1') !== false) {
+      return 'Windows XP';
+    }elseif (strpos($this->uagent, 'Windows XP') !== false) {
+      return 'Windows XP';
+    }elseif (strpos($this->uagent, 'Windows NT 5.2') !== false) {
+      return 'Windows Server 2003';
+    }elseif (strpos($this->uagent, 'Windows NT 6.0') !== false) {
+      return 'Windows Vista';
+    }elseif (strpos($this->uagent, 'Windows NT 6.1') !== false) {
+      return 'Windows 7';
+    }elseif (strpos($this->uagent, 'Windows NT 6.2') !== false) {
+      return 'Windows 8';
+    }elseif (strpos($this->uagent, 'Windows NT 10.0') !== false) {
+      return 'Windows 10';
+    }elseif (strpos($this->uagent, 'Windows ME') !== false) {
+      return 'Windows ME';
+    }elseif (strpos($this->uagent, 'Windows NT 4.0') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'WinNT4.0') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'WinNT') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'Windows NT') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'WinNT') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'WinNT') !== false) {
+      return 'Windows NT 4.0';
+    }elseif (strpos($this->uagent, 'WinNT') !== false) {
+      return 'Windows NT 4.0';
+    }
+  }
+
+  private function readAndroidVersion() {
+    preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $this->uagent, $matches);
+    return 'Android v' . $matches[1];  
   }
 
   private function readName() {
@@ -55,7 +108,7 @@ class browserInfo {
       $this->sname = "Edge";
     }elseif(preg_match('/Trident/i',$uagent)){
       $this->bname = 'Internet Explorer';
-      $this->sname = "MSIE";
+      $this->sname = "Trident";
     }elseif(preg_match('/Lynx/i',$uagent)){
       $this->bname = 'Lynx';
       $this->sname = "Lynx";
@@ -70,7 +123,7 @@ class browserInfo {
     }
   }
 
-  private function readVersion(){
+  private function readBrowserVersion(){
     $known = array('Version', $this->sname, 'other');
     $pattern = '#(?<browser>' . join('|', $known) . ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
 
@@ -79,16 +132,16 @@ class browserInfo {
     
     if ($i != 1) {
       if (strripos($this->uagent,"Version") < strripos($this->uagent,$this->sname)){
-        $this->version= $matches['version'][0];
+        $this->bversion= $matches['version'][0];
       }else {
-        $this->version= $matches['version'][1];
+        $this->bversion= $matches['version'][1];
       }
     }else {
-      $this->version= $matches['version'][0];
+      $this->bversion= $matches['version'][0];
     }
 
-    if ($this->version==null || $this->version=="") {
-      $this->version='?';
+    if ($this->bversion==null || $this->bversion=="") {
+      $this->bversion='?';
     }
   }
 
@@ -100,8 +153,8 @@ class browserInfo {
     return $this->bname;
   }
 
-  public function getVersion(){
-    return $this->version;
+  public function getBrowserVersion(){
+    return $this->bversion;
   }
 
   public function getPlatform(){

@@ -30,7 +30,7 @@ echo '  <td>' . $browserInfo->getName() . '</td>';
 echo ' </tr>
  <tr>
   <th>Version</th>';
-echo '  <td>v' . $browserInfo->getVersion() . '</td>';
+echo '  <td>v' . $browserInfo->getBrowserVersion() . '</td>';
 echo ' </tr>
  <tr>
   <th>Platform</th>';
