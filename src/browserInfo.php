@@ -21,7 +21,11 @@ class browserInfo {
     }elseif(preg_match('/linux/i', $this->uagent)) {
       $this->platform = 'Linux';
     }elseif (preg_match('/macintosh|mac os x/i', $this->uagent)) {
-      $this->platform = 'Mac';
+      $this->platform = $this->readMacVersion();
+    }elseif (preg_match('/iPhone OS/i', $this->uagent)) {
+      $this->platform = $this->readMacVersion();      
+    }elseif (preg_match('/iPad/i', $this->uagent)) {
+      $this->platform = $this->readMacVersion();
     }elseif (preg_match('/windows|win32/i', $this->uagent)) {
       $this->platform = $this->readWindowsVersion();
     }
@@ -79,6 +83,13 @@ class browserInfo {
     preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $this->uagent, $matches);
     return 'Android v' . $matches[1] . ' (' .  
       $this->androidCodeName(substr($matches[1],0,1),substr($matches[1],2,1)) . ')';  
+  }
+
+  private function readMacVersion() {
+    preg_match('/\((.*?)\)/', $this->uagent, $matches);
+    $ver = str_replace('CPU ', '', $matches[1]);
+    $ver = str_replace('_', '.', $ver);
+    return $ver; 
   }
 
   private function androidCodeName($vMajor, $vMinor){
