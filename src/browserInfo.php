@@ -77,7 +77,41 @@ class browserInfo {
 
   private function readAndroidVersion() {
     preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $this->uagent, $matches);
-    return 'Android v' . $matches[1];  
+    return 'Android v' . $matches[1] . ' (' .  
+      $this->androidCodeName(substr($matches[1],0,1),substr($matches[1],2,1)) . ')';  
+  }
+
+  private function androidCodeName($vMajor, $vMinor){
+    if ($vMajor == '2') {
+      if($vMinor == '0' || $vMinor == '1') {
+        return 'Eclair';
+      }elseif($vMinor == '3') {
+        return 'Gingerbread';
+      }
+    }elseif ($vMajor == '3') {
+      return 'Honeycomb';
+    }elseif ($vMajor == '4') {
+      if($vMinor == '0') {
+        return 'Ice Cream Sandwich';
+      }elseif($vMinor == '4') {
+        return 'KitKat';
+      }else{
+        return 'Jelly Bean';
+      }
+    }elseif ($vMajor == '5') {
+      return 'Lollipop';
+    }elseif ($vMajor == '6') {
+      return 'Marshmallow';
+    }elseif ($vMajor == '7') {
+      return 'Nougat';
+    }elseif ($vMajor == '8') {
+      return 'Oreo';
+    }elseif ($vMajor == '9') {
+      return 'Pie';
+    }elseif ($vMajor == '10') {
+      return 'Q';
+    }
+    return '?';
   }
 
   private function readName() {
