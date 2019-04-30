@@ -19,7 +19,7 @@ class browserInfo {
     if (preg_match('/Android/i', $this->uagent)) {
       $this->platform = $this->readAndroidVersion();  
     }elseif(preg_match('/linux/i', $this->uagent)) {
-      $this->platform = 'Linux';
+      $this->platform = 'Linux' . ' (' . $this->readLinuxCpuLength() . ')';;
     }elseif (preg_match('/macintosh|mac os x/i', $this->uagent)) {
       $this->platform = $this->readMacVersion();
     }elseif (preg_match('/iPhone OS/i', $this->uagent)) {
@@ -81,10 +81,10 @@ class browserInfo {
       $winVer = 'Windows NT 4.0';
     }
 
-    return $winVer . ' (' . $this->cpuBitLength() . ')';
+    return $winVer . ' (' . $this->readWindowsCpuLength() . ')';
   }
 
-  private function cpuBitLength() {
+  private function readWindowsCpuLength() {
     if (strpos($this->uagent,"WOW64") == true ||
       strpos($this->uagent,"Win64") == true ||
       strpos($this->uagent,"x86_64") == true ||
@@ -93,6 +93,13 @@ class browserInfo {
       strpos($this->uagent,"amd64") == true ||
       strpos($this->uagent,"AMD64") == true ||
       strpos($this->uagent,"amd64") == true) {
+      return "64-bit";
+    }
+    return "32-bit";
+  }
+
+  private function readLinuxCpuLength() {
+    if (strpos($this->uagent,"x86_64")) {
       return "64-bit";
     }
     return "32-bit";

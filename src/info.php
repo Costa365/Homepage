@@ -24,6 +24,18 @@ echo ' </tr>
   <th>Location</th>';
 echo '  <td>' . $ipInfo->getLocation(). '</td>';
 echo ' </tr>
+<tr>
+  <th>AS</th>';
+echo '  <td>' . $ipInfo->getAs(). '</td>';
+echo ' </tr>
+<tr>
+  <th>Service Provider</th>';
+echo '  <td>' . $ipInfo->getIsp(). '</td>';
+echo ' </tr>
+<tr>
+  <th>Organisation</th>';
+echo '  <td>' . $ipInfo->getOrganisation(). '</td>';
+echo ' </tr>
  <tr>
   <th>Browser</th>';
 echo '  <td>' . $browserInfo->getName() . '</td>';
