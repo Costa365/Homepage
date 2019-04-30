@@ -1,6 +1,7 @@
 version: '3'
 services:
   server:
+    restart: always
     image: "nimmis/alpine-apache-php7"
     ports:
      - "80:80"
