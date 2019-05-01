@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 class clientInfo {
-  
   const UNKNOWN = 'Unknown';
 
   private $uagent = '';
@@ -12,8 +11,8 @@ class clientInfo {
   private $pattern = '';
   private $sname = '';
 
-  public function clientInfo() { 
-    $this->uagent = $_SERVER['HTTP_USER_AGENT'];
+  public function clientInfo($userAgent) { 
+    $this->uagent = $userAgent;
     $this->readPlatform();
     $this->readName();
     $this->readBrowserVersion();

@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 class ipInfo {
-  
   private $ipaddress = '';
   private $city = '';
   private $country = '';
@@ -81,6 +80,5 @@ class ipInfo {
     }
     return $location;
   }
-
 } 
 ?> 
