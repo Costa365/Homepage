@@ -38,11 +38,8 @@ echo '<td>' . $ipInfo->getOrganisation(). '</td>';
 echo '</tr>
  <tr>
   <th>Browser</th>';
-echo '<td>' . $clientInfo->getName() . '</td>';
-echo '</tr>
- <tr>
-  <th>Version</th>';
-echo '<td>' . $clientInfo->getBrowserVersion() . '</td>';
+$version = $clientInfo->getBrowserVersion() == clientInfo::UNKNOWN ? '' : (' '.$clientInfo->getBrowserVersion());
+echo '<td>' . $clientInfo->getName() . $version . '</td>';
 echo '</tr>
  <tr>
   <th>Platform</th>';
