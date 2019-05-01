@@ -17,7 +17,10 @@
  <div class="col c4"><h3>Blood Glucose Converter</h3>Easily convert between mg/dL and mmol/L blood glucose units<br><a href="http://bloodglucoseconverter.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>    
  <div class="col c4"><h3>Phone Info</h3>View information about mobile phones, obtained via FonoApi<br><a href="http://fonoapi.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>
  <div class="col c4"><h3>vPoker</h3>Android Video Poker game - get it Google Play and SlideMe<br><a href="http://vpoker.co.nf" class="btn btn-sm btn-a">Check it out!</a></div>
+ <div class="col c4"><h3>BPM Converter</h3>Beats Per Minute Converter - used for slicing music samples<br><a href="http://bpmconverter.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>
  </div>
+ </div>
+ 
  </div>
  </body>
 </html>
