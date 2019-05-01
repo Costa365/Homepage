@@ -2,7 +2,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Costa365 - About</title>
+  <title>Costa365 - Server</title>
   <link href="//mincss.com/entireframework.min.css" rel="stylesheet" type="text/css">
  </head>
  <body>
@@ -47,6 +47,14 @@ include_once('header.php');
  <tr>
   <th>Docker Compose</th>
   <td>Version 1.17.1</td>
+ </tr>
+ <tr>
+  <th>Docker Base Image</th>
+  <td><a href="https://hub.docker.com/r/nimmis/alpine-apache-php7/dockerfile">nimmis/alpine-apache-php7</a></td>
+ </tr>
+ <tr>
+  <th>Web server</th>
+  <td><?php echo str_replace('/', ' v', apache_get_version()); ?></td>
  </tr>
 </tbody>
 </table>

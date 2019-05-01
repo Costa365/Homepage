@@ -1,8 +1,8 @@
  <nav class="nav" tabindex="-1" onclick="this.focus()">
   <div class="container">
    <a class="pagename current" href="/">Costa365</a>
-   <a href="info.php">Browser Information</a> 
-   <a href="about.php">About Server</a>
+   <a href="client.php">Client Information</a> 
+   <a href="server.php">Server Information</a>
   </div>
  </nav>
  <p />

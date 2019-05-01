@@ -1,14 +1,16 @@
 <?php
-class browserInfo {
+class clientInfo {
   
+  const UNKNOWN = 'Unknown';
+
   private $uagent = '';
-  private $bname = 'Unknown';
-  private $bversion = '';
-  private $platform = 'Unknown';
+  private $bname = self::UNKNOWN;
+  private $bversion = self::UNKNOWN;
+  private $platform = self::UNKNOWN;
   private $pattern = '';
   private $sname = '';
 
-  public function BrowserInfo() { 
+  public function clientInfo() { 
     $this->uagent = $_SERVER['HTTP_USER_AGENT'];
     $this->readPlatform();
     $this->readName();
@@ -193,7 +195,7 @@ class browserInfo {
     
     if (strpos($uagent, 'curl') !== false) {
       $this->bname = 'Curl';
-      $this->sname = 'Curl';
+      $this->sname = 'curl';
     }
   }
 
@@ -206,16 +208,19 @@ class browserInfo {
     
     if ($i != 1) {
       if (strripos($this->uagent,"Version") < strripos($this->uagent,$this->sname)){
-        $this->bversion= $matches['version'][0];
+        $this->bversion = $matches['version'][0];
       }else {
-        $this->bversion= $matches['version'][1];
+        $this->bversion = $matches['version'][1];
       }
     }else {
-      $this->bversion= $matches['version'][0];
+      $this->bversion = $matches['version'][0];
     }
 
-    if ($this->bversion==null || $this->bversion=="") {
-      $this->bversion='?';
+    if ($this->bversion==null) {
+      $this->bversion=self::UNKNOWN;
+    }
+    else {
+      $this->bversion = 'v' . $this->bversion;
     }
   }
 
