@@ -13,12 +13,14 @@ class clientInfo {
 
   public function clientInfo($userAgent) { 
     $this->uagent = $userAgent;
-    $this->readPlatform();
-    $this->readName();
-    $this->readBrowserVersion();
+    if(strlen($this->uagent)>0){
+      $this->readPlatform();
+      $this->readName();
+      $this->readBrowserVersion();
+    }
   }
   
-  private function readPlatform() {
+  private function readPlatform(): void {
     if (preg_match('/Android/i', $this->uagent)) {
       $this->platform = $this->readAndroidVersion();  
     }elseif(preg_match('/linux/i', $this->uagent)) {
@@ -36,7 +38,7 @@ class clientInfo {
     }
   }
 
-  private function readWindowsVersion() {
+  private function readWindowsVersion(): string {
     $winVer = '';
     if (strpos($this->uagent, 'Windows 95') !== false) {
       $winVer = 'Windows 95';
@@ -87,7 +89,7 @@ class clientInfo {
     return $winVer . ' (' . $this->readWindowsCpuLength() . ')';
   }
 
-  private function readWindowsCpuLength() {
+  private function readWindowsCpuLength(): string {
     if (strpos($this->uagent,"WOW64") == true ||
       strpos($this->uagent,"Win64") == true ||
       strpos($this->uagent,"x86_64") == true ||
@@ -101,27 +103,27 @@ class clientInfo {
     return "32-bit";
   }
 
-  private function readLinuxCpuLength() {
+  private function readLinuxCpuLength(): string {
     if (strpos($this->uagent,"x86_64")) {
       return "64-bit";
     }
     return "32-bit";
   }
 
-  private function readAndroidVersion() {
+  private function readAndroidVersion(): string {
     preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $this->uagent, $matches);
     return 'Android v' . $matches[1] . ' (' .  
       $this->androidCodeName(substr($matches[1],0,1),substr($matches[1],2,1)) . ')';  
   }
 
-  private function readMacVersion() {
+  private function readMacVersion(): string {
     preg_match('/\((.*?)\)/', $this->uagent, $matches);
     $ver = str_replace('CPU ', '', $matches[1]);
     $ver = str_replace('_', '.', $ver);
     return $ver; 
   }
 
-  private function androidCodeName($vMajor, $vMinor){
+  private function androidCodeName(string $vMajor, string $vMinor): string {
     if ($vMajor == '2') {
       if($vMinor == '0' || $vMinor == '1') {
         return 'Eclair';
@@ -154,7 +156,7 @@ class clientInfo {
     return '?';
   }
 
-  private function readName() {
+  private function readName(): void {
     $uagent = $this->uagent;
     if(preg_match('/MSIE/i',$uagent) && !preg_match('/Opera/i',$uagent)){
       $this->bname = 'Internet Explorer';
@@ -200,7 +202,7 @@ class clientInfo {
     }
   }
 
-  private function readBrowserVersion(){
+  private function readBrowserVersion(): void {
     $known = array('Version', $this->sname, 'other');
     $pattern = '#(?<browser>' . join('|', $known) . ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
 
@@ -225,23 +227,23 @@ class clientInfo {
     }
   }
 
-  public function getUserAgent(){
+  public function getUserAgent(): string {
     return $this->uagent;
   }
 
-  public function getName(){
+  public function getName(): string {
     return $this->bname;
   }
 
-  public function getBrowserVersion(){
+  public function getBrowserVersion(): string {
     return $this->bversion;
   }
 
-  public function getPlatform(){
+  public function getPlatform(): string {
     return $this->platform;
   }
 
-  public function getPattern(){
+  public function getPattern(): string {
     return $this->pattern;
   }
 } 

@@ -9,12 +9,12 @@ class ipInfo {
   private $org = '';
   private $as = '';
 
-  public function IpInfo() { 
+  public function IpInfo(){ 
     $this->ipaddress = $this->getClientIp();
     $this->ipLocationIspInfo($this->ipaddress);
   }
   
-  private function getClientIp() {
+  private function getClientIp(): string {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
       $ipaddress = getenv('HTTP_CLIENT_IP');
@@ -33,7 +33,7 @@ class ipInfo {
     return $ipaddress;
   }
 
-  private function ipLocationIspInfo($ip) {
+  private function ipLocationIspInfo(string $ip): void {
     $ipdat = @json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
     
     $this->city = @$ipdat->city;
@@ -43,31 +43,31 @@ class ipInfo {
     $this->as = @$ipdat->as;
   }
 
-  public function getIpAddress(){
+  public function getIpAddress(): string {
     return $this->ipaddress;
   }
 
-  public function getCity(){
+  public function getCity(): string {
     return $this->city;
   }
 
-  public function getCountry(){
+  public function getCountry(): string {
     return $this->country;
   }
 
-  public function getIsp(){
+  public function getIsp(): string {
     return $this->isp;
   }
 
-  public function getOrganisation(){
+  public function getOrganisation(): string {
     return $this->org;
   }
 
-  public function getAs(){
+  public function getAs(): string {
     return $this->as;
   }
 
-  public function getLocation(){
+  public function getLocation(): string {
     $location = '';
     if(strlen($this->city) > 0){
       $location = $this->city;
