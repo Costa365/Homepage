@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CPU Info",
+    "description": "View benchmarks and other information about x86/x64 CPUs",
+    "link": "http://cpubenchmark.co.nf"
+  },  
+  {
+    "name": "Blood Glucose Converter",
+    "description": "Easily convert between mg/dL and mmol/L blood glucose units",
+    "link": "http://bloodglucoseconverter.co.nf"
+  },  
+  {
+    "name": "Phone Info",
+    "description": "View information about mobile phones, obtained via FonoApi",
+    "link": "http://fonoapi.co.nf"
+  },  
+  {
+    "name": "vPoker",
+    "description": "Android Video Poker game - get it Google Play and SlideMe",
+    "link": "http://vpoker.co.nf"
+  },  
+  {
+    "name": "BPM Converter",
+    "description": "Beats Per Minute Converter - used for slicing music samples",
+    "link": "http://bpmconverter.co.nf"
+  },  
+  {
+    "name": "Sound Play",
+    "description": "Dancehall Reggae sound effect player - bomb, rewind and other effects",
+    "link": "http://costa365.rf.gd"
+  }
+]

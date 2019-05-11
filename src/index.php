@@ -10,15 +10,14 @@
  include_once('header.php');
  ?>
  <div class="container">
- <div class="hero">
- </div>
  <div class="row">
- <div class="col c4"><h3>CPU Info</h3>View benchmarks and other information about x86/x64 CPUs<br><a href="http://cpubenchmark.co.nf" class="btn btn-sm btn-a">Check it out!</a></div>
- <div class="col c4"><h3>Blood Glucose Converter</h3>Easily convert between mg/dL and mmol/L blood glucose units<br><a href="http://bloodglucoseconverter.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>    
- <div class="col c4"><h3>Phone Info</h3>View information about mobile phones, obtained via FonoApi<br><a href="http://fonoapi.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>
- <div class="col c4"><h3>vPoker</h3>Android Video Poker game - get it Google Play and SlideMe<br><a href="http://vpoker.co.nf" class="btn btn-sm btn-a">Check it out!</a></div>
- <div class="col c4"><h3>BPM Converter</h3>Beats Per Minute Converter - used for slicing music samples<br><a href="http://bpmconverter.co.nf/" class="btn btn-sm btn-a">Check it out!</a></div>
- <div class="col c4"><h3>Sound Play</h3>Dancehall Reggae sound effect player - bomb, rewind and general effects<br><a href="http://costa365.rf.gd/" class="btn btn-sm btn-a">Check it out!</a></div>
+ <?php
+ include_once('cms.php');
+ $ct = cms::readContent('sites');
+ foreach ($ct as $k => $v) {
+  echo "<div class='col c4'><h3>{$ct[$k][name]}</h3>{$ct[$k][description]}<br><a href='{$ct[$k][link]}' class='btn btn-sm btn-a'>Check it out!</a></div>";
+ }
+ ?>
  </div>
  </div>
  
