@@ -111,9 +111,9 @@ class clientInfo {
   }
 
   private function readAndroidVersion(): string {
-    preg_match('/Android (\d+(?:\.\d+)+)[;)]/', $this->uagent, $matches);
+    preg_match('/Android ((\d+)(?:\.?)(\d*+)).*[;]/', $this->uagent, $matches);
     return 'Android v' . $matches[1] . ' (' .  
-      $this->androidCodeName(substr($matches[1],0,1),substr($matches[1],2,1)) . ')';  
+      $this->androidCodeName($matches[2],$matches[3]) . ')'; 
   }
 
   private function readMacVersion(): string {
@@ -151,7 +151,7 @@ class clientInfo {
     }elseif ($vMajor == '9') {
       return 'Pie';
     }elseif ($vMajor == '10') {
-      return 'Q';
+      return 'Android 10';
     }
     return '?';
   }

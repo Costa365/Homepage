@@ -13,24 +13,8 @@ include_once('header.php');
 <table class="table">
 <tbody>
  <tr>
-  <th>Server</th>
-  <td>Fujitsu Esprimo E7936</td>
- </tr>
- <tr>
   <th>Operating System</th>
-  <td>Lubuntu 18.04 (64-bit)</td>
- </tr>
- <tr>
-  <th>CPU</th>
-  <td><a href="https://ark.intel.com/content/www/us/en/ark/products/42802/intel-pentium-processor-e5800-2m-cache-3-20-ghz-800-mhz-fsb.html">Intel® Pentium® Processor E5800</a> <i> (Dual Core, 3.20 GHz)</i></td>
- </tr>
- <tr>
-  <th>Hard drive</th>
-  <td>Western Digital WD2500AAJS-7 (250GB)</td>
- </tr>
- <tr>
-  <th>RAM</th>
-  <td>4GB - 2 x 2GB Samsung DIMM DDR3 Synchronous 800 MHz</td>
+  <td><?php echo php_uname('a'); ?></td>
  </tr>
  <tr>
   <th>Server Side Language</th>
@@ -41,20 +25,12 @@ include_once('header.php');
   <td><a href="https://mincss.com">Min CSS</a></td>
  </tr>
  <tr>
-  <th>Docker</th>
-  <td>Version 18.09.5</td>
- </tr>
- <tr>
-  <th>Docker Compose</th>
-  <td>Version 1.17.1</td>
- </tr>
- <tr>
-  <th>Docker Base Image</th>
-  <td><a href="https://hub.docker.com/r/nimmis/alpine-apache-php7/dockerfile">nimmis/alpine-apache-php7</a></td>
- </tr>
- <tr>
   <th>Web server</th>
   <td><?php echo str_replace('/', ' v', apache_get_version()); ?></td>
+ </tr>
+  <tr>
+  <th>IP Address</th>
+  <td><?php echo gethostbyname("costa365.rf.gd"); ?></td>
  </tr>
 </tbody>
 </table>
@@ -62,4 +38,3 @@ include_once('header.php');
 
 </body>
 </html>
-

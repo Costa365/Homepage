@@ -54,7 +54,5 @@ echo '</tr>
 </div>';
 ?>
 
-</div>
-
 </body>
 </html>

@@ -37,5 +37,30 @@ final class clientInfoTest extends TestCase
     $this->assertTrue($clientInfo->getName() == "Apple Safari");
     $this->assertTrue($clientInfo->getBrowserVersion() == "v8.0");
   }
+
+  public function testAndroid6UserAgent(): void {
+    $clientInfo = new clientInfo(" Mozilla/5.0 (Linux; U; Android 6.0.0; ko-kr; LG-L160L Build/IML74K) AppleWebkit/534.30 (KHTML, like Gecko) Version/6.0 Mobile Safari/534.30");
+    print ("\ngetPlatform: " . $clientInfo->getPlatform());
+    print ("\ngetName: " . $clientInfo->getName());
+    print ("\ngetBrowserVersion: " . $clientInfo->getBrowserVersion());
+    $this->assertTrue($clientInfo->getPlatform() == "Android v6.0 (Marshmallow)");
+  }
+
+  public function testAndroid9UserAgent(): void {
+    $clientInfo = new clientInfo("Mozilla/5.0 (Linux; Android 9; motorola one power) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.96 Mobile Safari/537.36");
+    print ("\ngetPlatform: " . $clientInfo->getPlatform());
+    print ("\ngetName: " . $clientInfo->getName());
+    print ("\ngetBrowserVersion: " . $clientInfo->getBrowserVersion());
+    $this->assertTrue($clientInfo->getPlatform() == "Android v9 (Pie)");
+  }
+
+  public function testAndroid10UserAgent(): void {
+    $clientInfo = new clientInfo("Mozilla/5.0 (Linux; Android 10; SM-G970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3396.81 Mobile Safari/537.36");
+    print ("\ngetPlatform: " . $clientInfo->getPlatform());
+    print ("\ngetName: " . $clientInfo->getName());
+    print ("\ngetBrowserVersion: " . $clientInfo->getBrowserVersion());
+    $this->assertTrue($clientInfo->getPlatform() == "Android v10 (Android 10)");
+  }
+
 }
 
