@@ -2,51 +2,61 @@
   {
     "name": "CPU Info",
     "description": "View benchmarks and other information about x86/x64 CPUs",
-    "link": "http://costa365.rf.gd/cpubenchmark"
+    "link": "http://costa365.rf.gd/cpubenchmark",
+    "image": "images/cpu.png"
   },
   {
     "name": "Tetris",
     "description": "Classic Tetris game, written in pure Javascript in HTML5 Canvas",
-    "link": "http://costa365.rf.gd/tetris"
+    "link": "http://costa365.rf.gd/tetris",
+    "image": "images/tetris.png"
   },
   {
     "name": "Blood Glucose Converter",
     "description": "Easily convert between mg/dL and mmol/L blood glucose units",
-    "link": "http://costa365.rf.gd/bloodglucoseconverter/"
+    "link": "http://costa365.rf.gd/bloodglucoseconverter/",
+    "image": "images/blood.png"
   },
   {
     "name": "Phone Info",
     "description": "View information about mobile phones, obtained via FonoApi",
-    "link": "http://costa365.rf.gd/phoneinfo"
+    "link": "http://costa365.rf.gd/phoneinfo",
+    "image": "images/phone.png"
   },
   {
     "name": "vPoker",
     "description": "Android Video Poker game - get it Google Play and SlideMe",
-    "link": "https://play.google.com/store/apps/details?id=com.vPoker"
+    "link": "https://play.google.com/store/apps/details?id=com.vPoker",
+    "image": "images/poker.png"
   },
   {
     "name": "BPM Converter",
     "description": "Beats Per Minute Converter - used for slicing music samples",
-    "link": "http://bpmconverter.co.nf"
+    "link": "http://costa365.rf.gd/bpmconverter",
+    "image": "images/bpm.png"
   },
   {
     "name": "Sound Play",
     "description": "Dancehall Reggae sound effect player - bomb, rewind and other effects",
-    "link": "http://costa365.rf.gd/soundplay/"
+    "link": "http://costa365.rf.gd/soundplay/",
+    "image": "images/sound.png"
   },
   {
     "name": "GitHub/Costa365",
     "description": "Github repositories, including some of the sites list on this page",
-    "link": "https://github.com/costa365"
+    "link": "https://github.com/costa365",
+    "image": "images/github.png"
   },
   {
     "name": "Dual Cee Net",
     "description": "Ancient Angelfire site, which includes the Premier BPM application",
-    "link": "http://www.angelfire.com/ab/dualcee"
+    "link": "http://www.angelfire.com/ab/dualcee",
+    "image": "images/premier.png"
   },
   {
     "name": "Soundcloud - Dual Cee",
     "description": "Instrumental Hip Hop tracks, made using FL Studio and other tools",
-    "link": "https://soundcloud.com/dual-cee"
+    "link": "https://soundcloud.com/dual-cee",
+    "image": "images/soundcloud.png"
   }
 ]
