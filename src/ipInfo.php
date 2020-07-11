@@ -9,8 +9,13 @@ class ipInfo {
   private $org = '';
   private $as = '';
 
-  public function IpInfo(){ 
-    $this->ipaddress = $this->getClientIp();
+  public function ipInfo(string $ip){
+    if(strlen($ip) > 0){
+      $this->ipaddress = $ip; 
+    } else {
+      $this->ipaddress = $this->getClientIp();
+    }
+    
     $this->ipLocationIspInfo($this->ipaddress);
   }
   

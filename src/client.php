@@ -11,7 +11,7 @@
   include_once('clientInfo.php');
   include_once('ipInfo.php');
   $clientInfo = new clientInfo($_SERVER['HTTP_USER_AGENT']);
-  $ipInfo = new ipInfo();
+  $ipInfo = new ipInfo("");
 
 echo '<div class="container">
 <table class="table">

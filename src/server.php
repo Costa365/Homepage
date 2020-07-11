@@ -28,11 +28,23 @@ include_once('header.php');
   <th>Web server</th>
   <td><?php echo str_replace('/', ' v', apache_get_version()); ?></td>
  </tr>
-  <tr>
+ <tr>
   <th>IP Address</th>
   <td><?php echo gethostbyname("costa365.rf.gd"); ?></td>
  </tr>
-</tbody>
+
+
+ <?php
+  include_once('ipInfo.php');
+  $ipInfo = new ipInfo(gethostbyname("costa365.rf.gd"));
+
+  echo '<tr><th>Location</th><td>' . $ipInfo->getLocation() . '</td></tr>';
+  echo '<tr><th>AS</th><td>' . $ipInfo->getAs() . '</td></tr>';
+  echo '<tr><th>Service Provider</th><td>' . $ipInfo->getIsp() . '</td></tr>';
+  echo '<tr><th>Organisation</th><td>' . $ipInfo->getOrganisation() . '</td></tr>';
+ ?> 
+ 
+ </tbody>
 </table>
 </div>
 

@@ -1,5 +1,11 @@
 [
   {
+    "name": "Notes365",
+    "description": "Signup, login, create and manage all your online notes",
+    "link": "https://notes365.tk",
+    "image": "images/notes.png"
+  },
+  {
     "name": "CPU Info",
     "description": "View benchmarks and other information about x86/x64 CPUs",
     "link": "http://costa365.rf.gd/cpubenchmark",
