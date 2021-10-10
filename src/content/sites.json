@@ -3,7 +3,7 @@
     "name": "Extreme Weather",
     "description": "View world wide extreme weather statistics for past 24 hours",
     "link": "https://extreme-weather.gq",
-    "image": "images/notes.png"
+    "image": "images/weather.png"
   },
   {
     "name": "CPU Info",
@@ -15,7 +15,7 @@
     "name": "Country Information",
     "description": "Lookup country information using ISO codes or country name",
     "link": "http://costa365.rf.gd/countries/",
-    "image": "images/cpu.png"
+    "image": "images/countries.png"
   },
   {
     "name": "Tetris",
