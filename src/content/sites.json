@@ -1,14 +1,20 @@
 [
   {
-    "name": "Notes365",
-    "description": "Signup, login, create and manage all your online notes",
-    "link": "https://notes365.tk",
+    "name": "Extreme Weather",
+    "description": "View world wide extreme weather statistics for past 24 hours",
+    "link": "https://extreme-weather.gq",
     "image": "images/notes.png"
   },
   {
     "name": "CPU Info",
     "description": "View benchmarks and other information about x86/x64 CPUs",
     "link": "http://costa365.rf.gd/cpubenchmark",
+    "image": "images/cpu.png"
+  },
+  {
+    "name": "Country Information",
+    "description": "Lookup country information using ISO codes or country name",
+    "link": "http://costa365.rf.gd/countries/",
     "image": "images/cpu.png"
   },
   {
@@ -25,7 +31,7 @@
   },
   {
     "name": "Phone Info",
-    "description": "View information about mobile phones, obtained via FonoApi",
+    "description": "View information about mobile phones (FonoApi is offline)",
     "link": "http://costa365.rf.gd/phoneinfo",
     "image": "images/phone.png"
   },
@@ -49,7 +55,7 @@
   },
   {
     "name": "GitHub/Costa365",
-    "description": "Github repositories, including some of the sites list on this page",
+    "description": "Github repositories, including some of the sites listed on this page",
     "link": "https://github.com/costa365",
     "image": "images/github.png"
   },

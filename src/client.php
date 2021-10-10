@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Costa365 - Client</title>
-  <link href="//mincss.com/entireframework.min.css" rel="stylesheet" type="text/css">
+  <link href="entireframework.min.css" rel="stylesheet" type="text/css">
  </head>
  <body>
  <?php
