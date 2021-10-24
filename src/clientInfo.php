@@ -152,6 +152,12 @@ class clientInfo {
       return 'Pie';
     }elseif ($vMajor == '10') {
       return 'Android 10';
+    }elseif ($vMajor == '11') {
+      return 'Android 11';
+    }elseif ($vMajor == '12') {
+      return 'Android 12';
+    }elseif ($vMajor == '13') {
+      return 'Android 13';
     }
     return '?';
   }
@@ -170,18 +176,27 @@ class clientInfo {
     }elseif(preg_match('/SamsungBrowser/i',$uagent)){
       $this->bname = 'Samsung Browser';
       $this->sname = 'SamsungBrowser';
-    }elseif(preg_match('/Chrome/i',$uagent) && !preg_match('/Edge/i',$uagent)){
+    }elseif(preg_match('/Chrome/i',$uagent) && !preg_match('/Edg/i',$uagent)){
       $this->bname = 'Google Chrome';
       $this->sname = 'Chrome';
-    }elseif(preg_match('/Safari/i',$uagent) && !preg_match('/Edge/i',$uagent)){
+    }elseif(preg_match('/Safari/i',$uagent) && !preg_match('/Edg/i',$uagent)){
       $this->bname = 'Apple Safari';
       $this->sname = "Safari";
     }elseif(preg_match('/Netscape/i',$uagent)){
       $this->bname = 'Netscape';
       $this->sname = "Netscape";
     }elseif(preg_match('/Edge/i',$uagent)){
-      $this->bname = 'Edge';
+      $this->bname = 'Microsoft Edge';
       $this->sname = "Edge";
+    }elseif(preg_match('/EdgA/i',$uagent)){
+      $this->bname = 'Microsoft Edge';
+      $this->sname = "EdgA";
+    }elseif(preg_match('/EdgiOS/i',$uagent)){
+      $this->bname = 'Microsoft Edge';
+      $this->sname = "EdgiOS";
+    }elseif(preg_match('/Edg/i',$uagent)){
+      $this->bname = 'Microsoft Edge';
+      $this->sname = "Edg";
     }elseif(preg_match('/Trident/i',$uagent)){
       $this->bname = 'Internet Explorer';
       $this->sname = "Trident";
@@ -224,7 +239,7 @@ class clientInfo {
     }
     else {
       $this->bversion = 'v' . $this->bversion;
-    }
+    }  
   }
 
   public function getUserAgent(): string {
