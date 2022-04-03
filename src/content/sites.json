@@ -12,6 +12,12 @@
     "image": "images/cpu.png"
   },
   {
+    "name": "Free Casino",
+    "description": "Play slots, table games and other games in free play mode",
+    "link": "http://free-casino.gq",
+    "image": "images/casino.png"
+  },
+  {
     "name": "Country Information",
     "description": "Lookup country information using ISO codes or country name",
     "link": "http://costa365.rf.gd/countries",
@@ -24,28 +30,22 @@
     "image": "images/tetris.png"
   },
   {
+    "name": "Forex Rates",
+    "description": "Daily Forex rate for major currency pairs - hosted on Netlify",
+    "link": "https://friendly-croquembouche-1302ca.netlify.app",
+    "image": "images/forex.png"
+  },
+  {
     "name": "Blood Glucose Converter",
     "description": "Easily convert between mg/dL and mmol/L blood glucose units",
     "link": "http://costa365.rf.gd/bloodglucoseconverter/",
     "image": "images/blood.png"
   },
   {
-    "name": "Phone Info",
-    "description": "View information about mobile phones (FonoApi is offline)",
-    "link": "http://costa365.rf.gd/phoneinfo",
-    "image": "images/phone.png"
-  },
-  {
     "name": "vPoker",
     "description": "Android Video Poker game - get it Google Play and SlideMe",
     "link": "https://play.google.com/store/apps/details?id=com.vPoker",
     "image": "images/poker.png"
-  },
-  {
-    "name": "BPM Converter",
-    "description": "Beats Per Minute Converter - used for slicing music samples",
-    "link": "http://costa365.rf.gd/bpmconverter",
-    "image": "images/bpm.png"
   },
   {
     "name": "Sound Play",
