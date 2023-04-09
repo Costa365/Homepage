@@ -2,7 +2,7 @@
   {
     "name": "Extreme Weather",
     "description": "View world wide extreme weather statistics for past 24 hours",
-    "link": "https://extreme-weather.gq",
+    "link": "https://extremeweather.ga",
     "image": "images/weather.png"
   },
   {
@@ -14,19 +14,37 @@
   {
     "name": "Free Casino",
     "description": "Play slots, table games and other games in free play mode",
-    "link": "http://free-casino.gq",
+    "link": "https://freecasino.costa365.site/",
     "image": "images/casino.png"
+  },
+  {
+    "name": "Notes365",
+    "description": "Sign up, log in, create, edit and delete notes online today",
+    "link": "https://notes365.ga/",
+    "image": "images/notes.png"
+  },
+  {
+    "name": "Earthquakes",
+    "description": "View the latest earhquakes from around the around the world",
+    "link": "https://earthquakes.costa365.site",
+    "image": "images/earthquakes.png"
+  },
+  {
+    "name": "Markdown Publisher",
+    "description": "Publish markdown documents. Sharable URL is generated for you",
+    "link": "https://mdpub.costa365.site/",
+    "image": "images/markdown.png"
   },
   {
     "name": "Country Information",
     "description": "Lookup country information using ISO codes or country name",
-    "link": "http://costa365.rf.gd/countries",
+    "link": "https://costa365.rf.gd/countries",
     "image": "images/countries.png"
   },
   {
     "name": "Tetris",
     "description": "Classic Tetris game, written in pure Javascript in HTML5 Canvas",
-    "link": "http://costa365.rf.gd/tetris",
+    "link": "https://costa365.rf.gd/tetris",
     "image": "images/tetris.png"
   },
   {
@@ -38,7 +56,7 @@
   {
     "name": "Blood Glucose Converter",
     "description": "Easily convert between mg/dL and mmol/L blood glucose units",
-    "link": "http://costa365.rf.gd/bloodglucoseconverter/",
+    "link": "https://costa365.rf.gd/bloodglucoseconverter/",
     "image": "images/blood.png"
   },
   {
@@ -50,7 +68,7 @@
   {
     "name": "Sound Play",
     "description": "Dancehall Reggae sound effect player - bomb, rewind and other effects",
-    "link": "http://costa365.rf.gd/soundplay/",
+    "link": "https://costa365.rf.gd/soundplay/",
     "image": "images/sound.png"
   },
   {
