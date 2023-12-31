@@ -1,7 +1,11 @@
 td {
-  height: 98px;
+  height: 198px;
 }
 
 h3 {
   margin-bottom: 0px;
+}
+
+.cpanel {
+  height: 100px;
 }
