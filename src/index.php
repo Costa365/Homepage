@@ -16,10 +16,10 @@
  include_once('cms.php');
  $ct = cms::readContent('sites');
  foreach ($ct as $k => $v) {
-  echo "<div class='col c4'><h3>{$ct[$k][name]}</h3>";
+  echo "<div class='col c4'><h3>{$ct[$k]['name']}</h3>";
   echo "<table><tr>";
-  echo "<td><img src='{$ct[$k][image]}' alt='' height='76' width='76'></td>";
-  echo "<td>{$ct[$k][description]}<br><a href='{$ct[$k][link]}' class='btn btn-sm btn-a'>Check it out!</a></td>";
+  echo "<td><img src='{$ct[$k]['image']}' alt='' height='76' width='76'></td>";
+  echo "<td>{$ct[$k]['description']}<br><a href='{$ct[$k]['link']}' class='btn btn-sm btn-a'>Check it out!</a></td>";
   echo "</tr></table></div>";
  }
  ?>
@@ -29,3 +29,4 @@
  </div>
  </body>
 </html>
+

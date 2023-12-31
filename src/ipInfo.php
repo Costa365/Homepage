@@ -9,7 +9,7 @@ class ipInfo {
   private $org = '';
   private $as = '';
 
-  public function ipInfo(string $ip){
+  public function __construct(string $ip){
     if(strlen($ip) > 0){
       $this->ipaddress = $ip; 
     } else {
@@ -41,11 +41,11 @@ class ipInfo {
   private function ipLocationIspInfo(string $ip): void {
     $ipdat = @json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
     
-    $this->city = @$ipdat->city;
-    $this->country = @$ipdat->country;
-    $this->isp = @$ipdat->isp;
-    $this->org = @$ipdat->org;
-    $this->as = @$ipdat->as;
+    $this->city = (string)@$ipdat->city;
+    $this->country = (string)@$ipdat->country;
+    $this->isp = (string)@$ipdat->isp;
+    $this->org = (string)@$ipdat->org;
+    $this->as = (string)@$ipdat->as;
   }
 
   public function getIpAddress(): string {
@@ -74,10 +74,10 @@ class ipInfo {
 
   public function getLocation(): string {
     $location = '';
-    if(strlen($this->city) > 0){
+    if(!is_null($this->city) && strlen($this->city) > 0){
       $location = $this->city;
     }
-    if(strlen($this->country) > 0 ){
+    if(!is_null($this->country) && strlen($this->country) > 0 ){
       if(strlen($location) > 0){
         $location = $location . ', ';
       }

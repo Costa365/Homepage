@@ -14,7 +14,7 @@ include_once('header.php');
 <tbody>
  <tr>
   <th>Operating System</th>
-  <td><?php echo php_uname('a'); ?></td>
+  <td><?php echo PHP_OS; ?></td>
  </tr>
  <tr>
   <th>Server Side Language</th>
@@ -26,7 +26,7 @@ include_once('header.php');
  </tr>
  <tr>
   <th>Web server</th>
-  <td><?php echo str_replace('/', ' v', apache_get_version()); ?></td>
+  <td><?php echo $_SERVER['SERVER_SOFTWARE']; ?></td>
  </tr>
  <tr>
   <th>IP Address</th>

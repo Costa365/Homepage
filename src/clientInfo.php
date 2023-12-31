@@ -11,7 +11,7 @@ class clientInfo {
   private $pattern = '';
   private $sname = '';
 
-  public function clientInfo($userAgent) { 
+  public function __construct($userAgent) { 
     $this->uagent = $userAgent;
     if(strlen($this->uagent)>0){
       $this->readPlatform();
