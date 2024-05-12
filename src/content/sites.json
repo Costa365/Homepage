@@ -6,6 +6,12 @@
     "image": "images/weather.png"
   },
   {
+    "name": "Earthquakes",
+    "description": "View recent earthquakes > Magnitude 3.0 from around the world",
+    "link": "https://earthquakes.costa365.site",
+    "image": "images/earthquakes.png"
+  },
+  {
     "name": "CPU Info",
     "description": "View benchmarks and other information about x86/x64 CPUs",
     "link": "http://costa365.rf.gd/cpubenchmark",
@@ -36,6 +42,12 @@
     "image": "images/markdown.png"
   },
   {
+    "name": "Password Generator",
+    "description": "Generate a secure password containing letters, numbers and symbols",
+    "link": "https://costa365.rf.gd/password/",
+    "image": "images/password.png"
+  },
+  {
     "name": "Country Information",
     "description": "Lookup country information using ISO codes or country name",
     "link": "https://costa365.rf.gd/countries",
@@ -52,6 +64,12 @@
     "description": "Daily Forex rate for major currency pairs - hosted on Netlify",
     "link": "https://friendly-croquembouche-1302ca.netlify.app",
     "image": "images/forex.png"
+  },
+  {
+    "name": "Joker",
+    "description": "Get and display random jokes from https://icanhazdadjoke.com/",
+    "link": "https://joker.costa365.site/",
+    "image": "images/jokes.png"
   },
   {
     "name": "Blood Glucose Converter",
