@@ -42,6 +42,12 @@
     "image": "images/markdown.png"
   },
   {
+    "name": "World Weather",
+    "description": "Current temperatures and weather conditions around the world",
+    "link": "https://world.costa365.site/",
+    "image": "images/temperatures.png"
+  },
+  {
     "name": "Password Generator",
     "description": "Generate a secure password containing letters, numbers and symbols",
     "link": "https://costa365.rf.gd/password/",
@@ -79,8 +85,8 @@
   },
   {
     "name": "vPoker",
-    "description": "Android Video Poker game - get it Google Play and SlideMe",
-    "link": "https://play.google.com/store/apps/details?id=com.vPoker",
+    "description": "Android Video Poker game - get it Google Play and APK Pure",
+    "link": "https://apkpure.com/vpoker/com.vPoker",
     "image": "images/poker.png"
   },
   {
@@ -94,12 +100,6 @@
     "description": "Github repositories, including some of the sites listed on this page",
     "link": "https://github.com/costa365",
     "image": "images/github.png"
-  },
-  {
-    "name": "Dual Cee Net",
-    "description": "Ancient Angelfire site, which includes the Premier BPM application",
-    "link": "http://www.angelfire.com/ab/dualcee",
-    "image": "images/premier.png"
   },
   {
     "name": "Soundcloud - Dual Cee",
