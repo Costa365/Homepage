@@ -80,13 +80,17 @@ body {
 .nav a {
     color: #e0e0e0;
     text-decoration: none;
-    padding: 8px 15px;
+    padding: 3px 15px 3px 0px;
     transition: background-color 0.3s;
 }
 
-.nav a:hover, .nav a.current {
+.nav a:hover, .nav .nav-links a.current {
     background-color: #333;
     border-radius: 4px;
+}
+
+.nav .pagename {
+    background-color: transparent;
 }
 
 /* Grid for Cards */
