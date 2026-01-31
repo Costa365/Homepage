@@ -11,16 +11,18 @@
  include_once('header.php');
  ?>
  <div class="container">
- <div class="row">
+ <div class="card-grid">
  <?php
  include_once('cms.php');
  $ct = cms::readContent('sites');
  foreach ($ct as $k => $v) {
-  echo "<div class='col c4'><h3>{$ct[$k]['name']}</h3>";
-  echo "<table><tr>";
-  echo "<td class='cpanel'><img src='{$ct[$k]['image']}' alt='' height='76' width='76'></td>";
-  echo "<td class='cpanel'>{$ct[$k]['description']}<br><a href='{$ct[$k]['link']}' class='btn btn-sm btn-a'>Check it out!</a></td>";
-  echo "</tr></table></div>";
+  echo "<div class='card'>";
+  echo "<div class='card-header'><h3>{$ct[$k]['name']}</h3><a href='{$ct[$k]['link']}' class='btn btn-a' target='_blank'>Check it out!</a></div>";
+  echo "<div class='card-content'>";
+  echo "<img src='{$ct[$k]['image']}' alt='{$ct[$k]['name']}'>";
+  echo "<div class='description'>{$ct[$k]['description']}</div>";
+  echo "</div>";
+  echo "</div>";
  }
  ?>
  </div>
