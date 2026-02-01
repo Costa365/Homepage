@@ -30,16 +30,22 @@
     "image": "images/notes.png"
   },
   {
-    "name": "Two Truths And A Lie",
-    "description": "Two Truths And A Lie group bonding and team building game",
-    "link": "https://truthslie.site",
-    "image": "images/truths.png"
+    "name": "Boxing Champions",
+    "description": "Current world boxing champions for all major boxing organisations",
+    "link": "https://boxing.costa365.site/",
+    "image": "images/boxing.png"
   },
   {
-    "name": "Markdown Publisher",
-    "description": "Publish markdown documents. Sharable URL is generated for you",
-    "link": "https://mdpub.costa365.site/",
-    "image": "images/markdown.png"
+    "name": "Larnaca Airport",
+    "description": "Larnaca airport information and flight status",
+    "link": "https://lca.costa365.site/",
+    "image": "images/plane.png"
+  },
+  {
+    "name": "Two Truths And A Lie",
+    "description": "Two Truths And A Lie group bonding and team building game",
+    "link": "https://truthslie.co.uk",
+    "image": "images/truths.png"
   },
   {
     "name": "World Weather",
@@ -60,28 +66,22 @@
     "image": "images/countries.png"
   },
   {
-    "name": "Tetris",
-    "description": "Classic Tetris game, written in pure Javascript in HTML5 Canvas",
-    "link": "https://costa365.rf.gd/tetris",
-    "image": "images/tetris.png"
-  },
-  {
-    "name": "Forex Rates",
-    "description": "Daily Forex rate for major currency pairs - hosted on Netlify",
-    "link": "https://friendly-croquembouche-1302ca.netlify.app",
-    "image": "images/forex.png"
-  },
-  {
     "name": "Joker",
     "description": "Get and display random jokes from https://icanhazdadjoke.com/",
     "link": "https://joker.costa365.site/",
     "image": "images/jokes.png"
   },
   {
-    "name": "Blood Glucose Converter",
-    "description": "Easily convert between mg/dL and mmol/L blood glucose units",
-    "link": "https://costa365.rf.gd/bloodglucoseconverter/",
-    "image": "images/blood.png"
+    "name": "Markdown Publisher",
+    "description": "Publish markdown documents. Sharable URL is generated for you",
+    "link": "https://mdpub.costa365.site/",
+    "image": "images/markdown.png"
+  },
+  {
+    "name": "Tetris",
+    "description": "Classic Tetris game, written in pure Javascript in HTML5 Canvas",
+    "link": "https://costa365.rf.gd/tetris",
+    "image": "images/tetris.png"
   },
   {
     "name": "vPoker",
