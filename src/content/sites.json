@@ -18,6 +18,24 @@
     "image": "images/cpu.png"
   },
   {
+    "name": "Screened",
+    "description": "Log movies that you've watched, with links to TMDB",
+    "link": "https://screened.costa365.site",
+    "image": "images/screened.png"
+  },
+  {
+    "name": "Kanban",
+    "description": "Kanban board with accounts and support for MarkDown",
+    "link": "https://kanban.costa365.site",
+    "image": "images/kanban.png"
+  },
+  {
+    "name": "Neon Snake",
+    "description": "Neon themed classic snake games written in JavaScript",
+    "link": "https://costa365.rf.gd/snake",
+    "image": "images/snake.png"
+  },
+  {
     "name": "Free Casino",
     "description": "Play slots, table games and other games in free play mode",
     "link": "https://freecasino.costa365.site",
