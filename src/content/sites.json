@@ -1,21 +1,15 @@
 [
   {
-    "name": "Extreme Weather",
-    "description": "View world wide extreme weather statistics for past 24 hours",
-    "link": "https://weather.costa365.site",
-    "image": "images/weather.png"
+    "name": "Kanban",
+    "description": "Kanban board with accounts and support for MarkDown",
+    "link": "https://kanban.costa365.site",
+    "image": "images/kanban.png"
   },
   {
-    "name": "Earthquakes",
-    "description": "View recent earthquakes > Magnitude 3.0 from around the world",
-    "link": "https://earthquakes.costa365.site",
-    "image": "images/earthquakes.png"
-  },
-  {
-    "name": "CPU Info",
-    "description": "View benchmarks and other information about x86/x64 CPUs",
-    "link": "http://costa365.rf.gd/cpubenchmark",
-    "image": "images/cpu.png"
+    "name": "Boxing Champions",
+    "description": "Current world boxing champions for all major boxing organisations",
+    "link": "https://boxing.costa365.site/",
+    "image": "images/boxing.png"
   },
   {
     "name": "Screened",
@@ -23,17 +17,23 @@
     "link": "https://screened.costa365.site",
     "image": "images/screened.png"
   },
-  {
-    "name": "Kanban",
-    "description": "Kanban board with accounts and support for MarkDown",
-    "link": "https://kanban.costa365.site",
-    "image": "images/kanban.png"
+    {
+    "name": "Tetrish",
+    "description": "Pure Bash Tetris for your terminal, with colorful blocks and scoring",
+    "link": "https://costa365.github.io/tetrish/",
+    "image": "images/tetrish.png"
   },
   {
-    "name": "Neon Snake",
-    "description": "Neon themed classic snake games written in JavaScript",
-    "link": "https://costa365.rf.gd/snake",
-    "image": "images/snake.png"
+    "name": "World Weather",
+    "description": "Current temperatures and weather conditions around the world",
+    "link": "https://world.costa365.site/",
+    "image": "images/temperatures.png"
+  },
+  {
+    "name": "CPU Info",
+    "description": "View benchmarks and other information about x86/x64 CPUs",
+    "link": "http://costa365.rf.gd/cpubenchmark",
+    "image": "images/cpu.png"
   },
   {
     "name": "Free Casino",
@@ -48,12 +48,6 @@
     "image": "images/notes.png"
   },
   {
-    "name": "Boxing Champions",
-    "description": "Current world boxing champions for all major boxing organisations",
-    "link": "https://boxing.costa365.site/",
-    "image": "images/boxing.png"
-  },
-  {
     "name": "Larnaca Airport",
     "description": "Larnaca airport information and flight status",
     "link": "https://lca.costa365.site/",
@@ -66,10 +60,28 @@
     "image": "images/truths.png"
   },
   {
-    "name": "World Weather",
-    "description": "Current temperatures and weather conditions around the world",
-    "link": "https://world.costa365.site/",
-    "image": "images/temperatures.png"
+    "name": "Joker",
+    "description": "Get and display random jokes from https://icanhazdadjoke.com/",
+    "link": "https://joker.costa365.site/",
+    "image": "images/jokes.png"
+  },
+  {
+    "name": "Extreme Weather",
+    "description": "View world wide extreme weather statistics for past 24 hours",
+    "link": "https://weather.costa365.site",
+    "image": "images/weather.png"
+  },
+  {
+    "name": "Earthquakes",
+    "description": "View recent earthquakes > Magnitude 3.0 from around the world",
+    "link": "https://earthquakes.costa365.site",
+    "image": "images/earthquakes.png"
+  },
+  {
+    "name": "Neon Snake",
+    "description": "Neon themed classic snake games written in JavaScript",
+    "link": "https://costa365.rf.gd/snake",
+    "image": "images/snake.png"
   },
   {
     "name": "Password Generator",
@@ -82,12 +94,6 @@
     "description": "Lookup country information using ISO codes or country name",
     "link": "https://costa365.rf.gd/countries",
     "image": "images/countries.png"
-  },
-  {
-    "name": "Joker",
-    "description": "Get and display random jokes from https://icanhazdadjoke.com/",
-    "link": "https://joker.costa365.site/",
-    "image": "images/jokes.png"
   },
   {
     "name": "Markdown Publisher",
@@ -108,21 +114,16 @@
     "image": "images/poker.png"
   },
   {
-    "name": "Sound Play",
-    "description": "Dancehall Reggae sound effect player - bomb, rewind and other effects",
-    "link": "https://costa365.rf.gd/soundplay/",
-    "image": "images/sound.png"
-  },
-  {
     "name": "GitHub/Costa365",
     "description": "Github repositories, including some of the sites listed on this page",
     "link": "https://github.com/costa365",
     "image": "images/github.png"
   },
   {
-    "name": "Soundcloud - Dual Cee",
-    "description": "Instrumental Hip Hop tracks, made using FL Studio and other tools",
-    "link": "https://soundcloud.com/dual-cee",
-    "image": "images/soundcloud.png"
+    "name": "Codewars/Costa365",
+    "description": "My profile on Codewars - practice programming and problem-solving",
+    "link": "https://www.codewars.com/users/costa365",
+    "image": "images/codewars.png"
   }
+  
 ]
