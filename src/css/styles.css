@@ -58,8 +58,8 @@ img, svg { display: block; }
 .wordmark { display: inline-flex; align-items: center; font-family: var(--display); font-size: 28px; line-height: 1; letter-spacing: -1.3px; flex-shrink: 0; }
 .brand-number { color: var(--muted); }
 .brand-period { color: var(--accent); }
-.brand-mark { display: grid; grid-template-columns: repeat(2,8px); gap: 3px; margin-right: 13px; }
-.brand-mark i { width: 8px; height: 8px; background: var(--accent); }
+.brand-mark { display: grid; grid-template-columns: repeat(2,12px); gap: 4px; margin-right: 13px; }
+.brand-mark i { width: 12px; height: 12px; background: var(--accent); }
 .brand-mark i:last-child { border-radius: 50%; }
 .site-navigation { display: flex; gap: 34px; align-items: center; font-size: 13px; }
 .nav-link { white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; gap: 9px; color: var(--muted); transition: color .2s; }

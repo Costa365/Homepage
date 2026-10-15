@@ -1,9 +1,23 @@
 <?php
 require_once __DIR__ . '/view.php';
 require_once __DIR__ . '/ipInfo.php';
-$serverAddress = $_SERVER['SERVER_ADDR'] ?? $_SERVER['LOCAL_ADDR'] ?? $_SERVER['SERVER_NAME'] ?? '';
-if (!filter_var($serverAddress, FILTER_VALIDATE_IP)) {
-    $serverAddress = '';
+$publicIpFlags = FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE;
+$serverAddress = '';
+foreach ([$_SERVER['SERVER_ADDR'] ?? '', $_SERVER['LOCAL_ADDR'] ?? ''] as $address) {
+    if (filter_var($address, FILTER_VALIDATE_IP, $publicIpFlags)) {
+        $serverAddress = $address;
+        break;
+    }
+}
+
+// Some Apache hosts publish only a private address to PHP. In that case,
+// resolve the site's configured public hostname instead of exposing loopback.
+if ($serverAddress === '' && PHP_SAPI !== 'cli' && PHP_SAPI !== 'cli-server') {
+    $publicHostname = getenv('PUBLIC_SERVER_HOSTNAME') ?: 'costa365.rf.gd';
+    $resolvedAddress = gethostbyname($publicHostname);
+    if ($resolvedAddress !== $publicHostname && filter_var($resolvedAddress, FILTER_VALIDATE_IP, $publicIpFlags)) {
+        $serverAddress = $resolvedAddress;
+    }
 }
 $network = $serverAddress !== '' ? new ipInfo($serverAddress) : null;
 $rows = [

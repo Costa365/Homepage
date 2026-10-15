@@ -45,7 +45,7 @@ Use `Tools`, `Discover`, or `Play` to match the current filters, or add another 
 - Stylesheets, scripts, and the SVG favicon use content-versioned URLs so a cached asset from an older design is not reused after an update.
 - The display font is self-hosted Liberation Sans Bold. Its SIL Open Font License is included in `src/fonts/LICENSE.txt`. No external fonts or frontend libraries are requested.
 
-The information utilities use the existing IP-API service for public network details, with a two-second HTTP timeout and graceful fallback when the service is unavailable. Private and reserved addresses are not looked up.
+The information utilities use the existing IP-API service for public network details, with a two-second HTTP timeout and graceful fallback when the service is unavailable. Private and reserved addresses are not looked up. If production PHP only sees a private server IP, the server page resolves `PUBLIC_SERVER_HOSTNAME` to display a public address. It defaults to `costa365.rf.gd`; set the environment variable to override it after a hostname change.
 
 ## Validation
 
