@@ -2,6 +2,6 @@
 <phpunit
 colors='true' >
 <testsuite name='My test suite'>
-    <directory suffix='.php'>./</directory>
+    <directory suffix='Test.php'>./</directory>
 </testsuite>
 </phpunit>

@@ -1,129 +1,151 @@
 [
   {
     "name": "Kanban",
-    "description": "Kanban board with accounts and support for MarkDown",
+    "description": "Plan your projects with a Kanban board and Markdown support.",
     "link": "https://kanban.costa365.site",
-    "image": "images/kanban.png"
+    "image": "images/kanban.png",
+    "category": "Tools"
   },
   {
     "name": "Boxing Champions",
-    "description": "Current world boxing champions for all major boxing organisations",
+    "description": "The world champions across all major boxing organisations.",
     "link": "https://boxing.costa365.site/",
-    "image": "images/boxing.png"
+    "image": "images/boxing.png",
+    "category": "Discover"
   },
   {
     "name": "Screened",
-    "description": "Log movies that you've watched, with links to TMDB",
+    "description": "Keep a record of the films you watch, with details from TMDB.",
     "link": "https://screened.costa365.site",
-    "image": "images/screened.png"
+    "image": "images/screened.png",
+    "category": "Tools"
   },
-    {
+  {
     "name": "Tetrish",
-    "description": "Pure Bash Tetris for your terminal, with colorful blocks and scoring",
+    "description": "Tetris for your terminal. Pure Bash, colourful blocks, proper fun.",
     "link": "https://costa365.github.io/tetrish/",
-    "image": "images/tetrish.png"
+    "image": "images/tetrish.png",
+    "category": "Play"
   },
   {
     "name": "World Weather",
-    "description": "Current temperatures and weather conditions around the world",
+    "description": "A look at current temperatures and conditions around the world.",
     "link": "https://world.costa365.site/",
-    "image": "images/temperatures.png"
+    "image": "images/temperatures.png",
+    "category": "Discover"
   },
   {
     "name": "CPU Info",
-    "description": "View benchmarks and other information about x86/x64 CPUs",
+    "description": "Compare benchmarks and explore the details of x86 and x64 CPUs.",
     "link": "http://costa365.rf.gd/cpubenchmark",
-    "image": "images/cpu.png"
+    "image": "images/cpu.png",
+    "category": "Discover"
   },
   {
     "name": "Free Casino",
-    "description": "Play slots, table games and other games in free play mode",
+    "description": "Slots, table games, and more. All in free-play mode.",
     "link": "https://freecasino.costa365.site",
-    "image": "images/casino.png"
+    "image": "images/casino.png",
+    "category": "Play"
   },
   {
     "name": "Notes365",
-    "description": "Sign up, log in, create, edit and delete notes online today",
+    "description": "A simple home for your notes. Write, edit, and keep them online.",
     "link": "https://notes365.costa365.site",
-    "image": "images/notes.png"
+    "image": "images/notes.png",
+    "category": "Tools"
   },
   {
     "name": "Larnaca Airport",
-    "description": "Larnaca airport information and flight status",
+    "description": "Flight status and airport information for Larnaca.",
     "link": "https://lca.costa365.site/",
-    "image": "images/plane.png"
+    "image": "images/plane.png",
+    "category": "Discover"
   },
   {
     "name": "Two Truths And A Lie",
-    "description": "Two Truths And A Lie group bonding and team building game",
+    "description": "Get a group talking with the classic icebreaker game.",
     "link": "https://truthslie.co.uk",
-    "image": "images/truths.png"
+    "image": "images/truths.png",
+    "category": "Play"
   },
   {
     "name": "Joker",
-    "description": "Get and display random jokes from https://icanhazdadjoke.com/",
+    "description": "A fresh dad joke, whenever you need one.",
     "link": "https://joker.costa365.site/",
-    "image": "images/jokes.png"
+    "image": "images/jokes.png",
+    "category": "Play"
   },
   {
     "name": "Extreme Weather",
-    "description": "View world wide extreme weather statistics for past 24 hours",
+    "description": "The last 24 hours of weather extremes, from around the globe.",
     "link": "https://weather.costa365.site",
-    "image": "images/weather.png"
+    "image": "images/weather.png",
+    "category": "Discover"
   },
   {
     "name": "Earthquakes",
-    "description": "View recent earthquakes > Magnitude 3.0 from around the world",
+    "description": "Explore recent earthquakes above magnitude 3.0.",
     "link": "https://earthquakes.costa365.site",
-    "image": "images/earthquakes.png"
+    "image": "images/earthquakes.png",
+    "category": "Discover"
   },
   {
     "name": "Neon Snake",
-    "description": "Neon themed classic snake games written in JavaScript",
+    "description": "The classic Snake game with a bright neon twist.",
     "link": "https://costa365.rf.gd/snake",
-    "image": "images/snake.png"
+    "image": "images/snake.png",
+    "category": "Play"
   },
   {
     "name": "Password Generator",
-    "description": "Generate a secure password containing letters, numbers and symbols",
+    "description": "Create passwords with a mix of letters, numbers, and symbols.",
     "link": "https://costa365.rf.gd/password/",
-    "image": "images/password.png"
+    "image": "images/password.png",
+    "category": "Tools"
   },
   {
     "name": "Country Information",
-    "description": "Lookup country information using ISO codes or country name",
+    "description": "Explore country details by name or ISO code.",
     "link": "https://costa365.rf.gd/countries",
-    "image": "images/countries.png"
+    "image": "images/countries.png",
+    "category": "Discover"
   },
   {
     "name": "Markdown Publisher",
-    "description": "Publish markdown documents. Sharable URL is generated for you",
+    "description": "Turn a Markdown document into a page with a shareable link.",
     "link": "https://mdpub.costa365.site/",
-    "image": "images/markdown.png"
+    "image": "images/markdown.png",
+    "category": "Tools"
   },
   {
     "name": "Tetris",
-    "description": "Classic Tetris game, written in pure Javascript in HTML5 Canvas",
+    "description": "The falling-block classic, built with JavaScript and HTML5 Canvas.",
     "link": "https://costa365.rf.gd/tetris",
-    "image": "images/tetris.png"
+    "image": "images/tetris.png",
+    "category": "Play"
   },
   {
     "name": "vPoker",
-    "description": "Android Video Poker game - get it Google Play and APK Pure",
+    "description": "Video poker for Android. Available on APKPure.",
     "link": "https://apkpure.com/vpoker/com.vPoker",
-    "image": "images/poker.png"
+    "image": "images/poker.png",
+    "category": "Play"
   },
   {
-    "name": "GitHub/Costa365",
-    "description": "Github repositories, including some of the sites listed on this page",
+    "name": "GitHub",
+    "description": "Browse the source code behind the projects and experiments.",
     "link": "https://github.com/costa365",
-    "image": "images/github.png"
+    "image": "images/github.png",
+    "category": "Elsewhere",
+    "label": "The source code"
   },
   {
-    "name": "Codewars/Costa365",
-    "description": "My profile on Codewars - practice programming and problem-solving",
+    "name": "Codewars",
+    "description": "A collection of coding challenges and problem-solving practice.",
     "link": "https://www.codewars.com/users/costa365",
-    "image": "images/codewars.png"
+    "image": "images/codewars.png",
+    "category": "Elsewhere",
+    "label": "The practice"
   }
-  
 ]

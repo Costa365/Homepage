@@ -33,19 +33,32 @@ class ipInfo {
       $ipaddress = getenv('HTTP_FORWARDED');
     else if(getenv('REMOTE_ADDR'))
       $ipaddress = getenv('REMOTE_ADDR');
+    else if(isset($_SERVER['REMOTE_ADDR']))
+      $ipaddress = $_SERVER['REMOTE_ADDR'];
     else
       $ipaddress = 'UNKNOWN';
     return $ipaddress;
   }
 
   private function ipLocationIspInfo(string $ip): void {
-    $ipdat = @json_decode(file_get_contents("http://ip-api.com/json/" . $ip));
-    
-    $this->city = (string)@$ipdat->city;
-    $this->country = (string)@$ipdat->country;
-    $this->isp = (string)@$ipdat->isp;
-    $this->org = (string)@$ipdat->org;
-    $this->as = (string)@$ipdat->as;
+    // Local addresses have no public location. A failed lookup must not hold up the page.
+    if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
+      return;
+    }
+    $context = stream_context_create(['http' => ['timeout' => 2, 'ignore_errors' => true]]);
+    $response = @file_get_contents('http://ip-api.com/json/' . rawurlencode($ip), false, $context);
+    if ($response === false) {
+      return;
+    }
+    $ipdat = json_decode($response, true);
+    if (!is_array($ipdat) || ($ipdat['status'] ?? '') !== 'success') {
+      return;
+    }
+    $this->city = (string)($ipdat['city'] ?? '');
+    $this->country = (string)($ipdat['country'] ?? '');
+    $this->isp = (string)($ipdat['isp'] ?? '');
+    $this->org = (string)($ipdat['org'] ?? '');
+    $this->as = (string)($ipdat['as'] ?? '');
   }
 
   public function getIpAddress(): string {
@@ -85,5 +98,4 @@ class ipInfo {
     }
     return $location;
   }
-} 
-?> 
+}

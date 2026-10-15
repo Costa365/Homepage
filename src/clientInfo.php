@@ -112,12 +112,18 @@ class clientInfo {
 
   private function readAndroidVersion(): string {
     preg_match('/Android ((\d+)(?:\.?)(\d*+)).*[;]/', $this->uagent, $matches);
+    if (!isset($matches[1], $matches[2], $matches[3])) {
+      return 'Android';
+    }
     return 'Android v' . $matches[1] . ' (' .  
       $this->androidCodeName($matches[2],$matches[3]) . ')'; 
   }
 
   private function readMacVersion(): string {
     preg_match('/\((.*?)\)/', $this->uagent, $matches);
+    if (!isset($matches[1])) {
+      return self::UNKNOWN;
+    }
     $ver = str_replace('CPU ', '', $matches[1]);
     $ver = str_replace('_', '.', $ver);
     return $ver; 
@@ -218,11 +224,17 @@ class clientInfo {
   }
 
   private function readBrowserVersion(): void {
+    if ($this->sname === '') {
+      return;
+    }
     $known = array('Version', $this->sname, 'other');
     $pattern = '#(?<browser>' . join('|', $known) . ')[/ ]+(?<version>[0-9.|a-zA-Z.]*)#';
 
     preg_match_all($pattern, $this->uagent, $matches);
     $i = count($matches['browser']);
+    if ($i === 0) {
+      return;
+    }
     
     if ($i != 1) {
       if (strripos($this->uagent,"Version") < strripos($this->uagent,$this->sname)){
@@ -261,5 +273,4 @@ class clientInfo {
   public function getPattern(): string {
     return $this->pattern;
   }
-} 
-?> 
+}
