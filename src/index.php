@@ -6,7 +6,7 @@ $apps = array_values(array_filter($sites, function ($site) { return ($site['cate
 $profiles = array_filter($sites, function ($site) { return ($site['category'] ?? '') === 'Elsewhere'; });
 $categories = array_values(array_unique(array_column($apps, 'category')));
 $page = 'home';
-$pageTitle = 'Costa365 — Useful things. Playful ideas.';
+$pageTitle = 'Costa365 — Useful things. Playful apps.';
 $pageDescription = 'An independent collection of apps, useful tools, games, and experiments by Costa365. Find your next useful thing.';
 ?>
 <!doctype html>
@@ -19,7 +19,7 @@ $pageDescription = 'An independent collection of apps, useful tools, games, and 
   <section class="hero container" aria-labelledby="hero-title">
     <div class="hero-kicker eyebrow"><span class="status-dot" aria-hidden="true"></span> Independent apps &amp; experiments <span class="hero-edition">The Costa365 collection</span></div>
     <div class="hero-main">
-      <h1 id="hero-title">Useful things.<br><span>Playful ideas.</span></h1>
+      <h1 id="hero-title">Useful things.<br><span>Playful apps.</span></h1>
       <div class="hero-art" aria-hidden="true">
         <svg class="studio-mark" viewBox="0 0 240 240" fill="none">
           <g fill="currentColor">
@@ -68,7 +68,7 @@ $pageDescription = 'An independent collection of apps, useful tools, games, and 
       <li class="app-item" data-category="<?= escape($app['category']) ?>" data-search="<?= escape($app['name'] . ' ' . $app['description'] . ' ' . $app['category']) ?>">
         <a class="app-row" href="<?= escape($app['link']) ?>" target="_blank" rel="noopener noreferrer">
           <span class="app-number mono" aria-hidden="true"><?= sprintf('%02d', $index + 1) ?></span>
-          <span class="app-icon"><img src="<?= escape($app['image']) ?>" width="32" height="32" alt="" loading="lazy"></span>
+          <span class="app-icon"><img src="<?= escape($app['image']) ?>" width="38" height="38" alt="" loading="lazy"></span>
           <h3><?= escape($app['name']) ?></h3>
           <p class="app-description"><?= escape($app['description']) ?></p>
           <span class="app-category"><?= escape($app['category']) ?></span>
@@ -91,6 +91,7 @@ $pageDescription = 'An independent collection of apps, useful tools, games, and 
     <div class="profile-links">
       <?php foreach ($profiles as $profile): ?>
       <a class="profile-link" href="<?= escape($profile['link']) ?>" target="_blank" rel="noopener noreferrer">
+        <img class="brand-icon profile-brand-icon" src="<?= escape(assetUrl($profile['image'])) ?>" width="44" height="44" alt="" loading="lazy">
         <div><span class="eyebrow"><?= escape($profile['label']) ?></span><h3><?= escape($profile['name']) ?></h3><p><?= escape($profile['description']) ?></p></div>
         <?= icon('external') ?><span class="sr-only">Opens in a new tab</span>
       </a>
