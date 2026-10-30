@@ -1,5 +1,12 @@
 [
   {
+    "name": "Mingle",
+    "description": "Team building games and icebreakers for groups of any size.",
+    "link": "https://mingle.costa365.site",
+    "image": "images/mingle.png",
+    "category": "Play"
+  },
+  {
     "name": "Kanban",
     "description": "Plan your projects with a Kanban board and Markdown support.",
     "link": "https://kanban.costa365.site",
@@ -66,7 +73,7 @@
     "name": "Two Truths And A Lie",
     "description": "Get a group talking with the classic icebreaker game.",
     "link": "https://truthslie.co.uk",
-    "image": "images/truths.png",
+    "image": "images/lier.png",
     "category": "Play"
   },
   {
