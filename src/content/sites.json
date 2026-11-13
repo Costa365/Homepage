@@ -7,6 +7,13 @@
     "category": "Play"
   },
   {
+    "name": "Daymark",
+    "description": "Set daily goals, track progress - build consistency through streaks.",
+    "link": "https://daymark.costa365.site",
+    "image": "images/daymark.png",
+    "category": "Tools"
+  },
+  {
     "name": "Kanban",
     "description": "Plan your projects with a Kanban board and Markdown support.",
     "link": "https://kanban.costa365.site",
