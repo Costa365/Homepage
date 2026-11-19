@@ -90,6 +90,13 @@
     "image": "images/jokes.png",
     "category": "Play"
   },
+{
+    "name": "GB Columns",
+    "description": "Columns game for the Original monochrome Game Boy.",
+    "link": "https://costa365.github.io/gb-columns//",
+    "image": "images/columns.png",
+    "category": "Play"
+  },
   {
     "name": "Extreme Weather",
     "description": "The last 24 hours of weather extremes, from around the globe.",
